@@ -1,0 +1,30 @@
+{
+	"name": "Auto Moodle Login",
+	"version": "1.1",
+	"description": "Auto login to moodle because I can't solve 103-87",
+	"browser_action": {
+		"default_title": "Add credentials",
+		"default_popup": "home.html"
+	   },
+	"content_scripts": [{
+		"matches": [
+			"https://moodle.iitd.ac.in/login/index.php"
+		],
+		"run_at": "document_idle",
+		"js": ["Moodle.js"]
+	}],
+	"permissions": [
+		"storage",
+		"notifications",
+		"background",
+		"tabs"
+		],
+	"icons": {
+		"36": "icons/icon36.png",
+		"48": "icons/icon48.png",
+		"96": "icons/icon96.png",
+		"192": "icons/icon192.png",
+		"512": "icons/icon512.png"
+		},
+	"manifest_version": 2
+}
